@@ -1,42 +1,6 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>SGF Attendance System</title>
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #000; font-family: sans-serif; }
-        #overlay { 
-            position: fixed; inset: 0; z-index: 999; 
-            background: #000; display: flex; flex-direction: column; 
-            align-items: center; justify-content: center; color: white;
-        }
-        button { 
-            background: #8B0000; color: white; border: none; padding: 20px 40px; 
-            border-radius: 50px; font-weight: bold; font-size: 18px; cursor: pointer;
-            box-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
-        }
-        iframe { width: 100%; height: 100%; border: none; position: fixed; top: 0; left: 0; display: none; }
-    </style>
-</head>
-<body>
-    <div id="overlay">
-        <button onclick="unlockCamera()">START SGF KIOSK</button>
-        <p style="margin-top: 20px; font-size: 10px; color: #444; letter-spacing: 2px;">SECURE HARDWARE BYPASS</p>
-    </div>
-
-    <iframe id="kioskFrame" 
-        src="https://script.google.com/macros/s/AKfycbyefjpSxq4oZkpQgLFdtUQjugS2GTuIa1bKcERHL-n-hqHkKBQYrcAn-BsnZ3sB23gePg/exec" 
-        allow="camera; microphone; autoplay; display-capture;">
-    </iframe>
-
-    <script>
-        function unlockCamera() {
-            // This 'User Gesture' unlocks the camera hardware for the iframe
-            document.getElementById('overlay').style.display = 'none';
-            document.getElementById('kioskFrame').style.display = 'block';
-        }
-    </script>
-</body>
-</html>
+<iframe id="kioskFrame" 
+    src="https://script.google.com/macros/s/AKfycbyY3NwPUGIyLVdXj6N6jjd7BEY35N311opvxwK4drJ_Fgb_14teTine9re4brFtHqV8Wg/exec" 
+    allow="camera *; microphone *; autoplay *; display-capture *; fullscreen *;"
+    sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+</iframe>
